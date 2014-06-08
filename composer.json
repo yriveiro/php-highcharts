@@ -1,0 +1,24 @@
+{
+		"name": "yriveiro/php-highcharts",
+		"description": "PHP API mapping for JavaScript library Highcharts.",
+		"keywords": ["php", "PHP", "Highcharts", "API", "Graphics", "Charts"],
+		"license": "MIT",
+		"authors": [
+				{
+						"name": "Yago Riveiro",
+						"email": "yago.riveiro@gmail.com"
+				}
+		],
+		"require": {
+				"php": ">=5.3.3",
+				"dflydev/dot-access-data": "v1.0.0",
+				"zendframework/zend-json": "2.3.*"
+		},
+		"require-dev": {
+				"phpunit/phpunit": "4.1.*",
+				"satooshi/php-coveralls": "dev-master"
+		},
+		"autoload": {
+				"psr-4": { "Highcharts\\": "src/Highcharts/" }
+		}
+}
