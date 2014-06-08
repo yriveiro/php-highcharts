@@ -1,0 +1,13 @@
+
+<html>
+    <head>
+        <title>Area range</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+		<script>$(function() {var chart = new Highcharts.Chart({"chart":{"renderTo":"container","type":"bar"},"title":{"text":"Historic World Population by Region"},"subtitle":{"text":"Source: Wikipedia.org"},"xAxis":{"title":null,"categories":["Africa","America","Asia","Europe","Oceania"]},"yAxis":{"min":0,"title":{"text":"Temperature (\u00baC)","align":"high","labels":{"overflow":"justify"}}},"tooltip":{"valueSuffix":" millions"},"plotOptions":{"bar":{"dataLabels":{"enabled":true}}},"legend":{"layout":"vertical","align":"right","verticalAlign":"top","x":-40,"y":100,"floating":true,"borderWidth":1,"backgroundColor":(Highcharts.theme && Highcharts.theme.legendBackgroundColor || "#FFFFFF"),"shadow":true},"credits":{"enabled":false},"series":[{"name":"Year 1800","data":[107,31,635,203,2]},{"name":"Year 1900","data":[133,156,947,408,6]},{"name":"Year 2008","data":[973,914,4054,732,34]}]});});</script>    </body>
+</html>
+
