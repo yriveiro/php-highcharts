@@ -12,8 +12,8 @@ class Highchart extends AbstractHighchart
 		parent::__construct();
 	}
 
-	public function render(AbstractEngine $engine)
+	public function render(AbstractEngine $engine, $scriptTags = true)
 	{
-		return $engine->render($this->build());
+		return $engine->render($this->build(), $scriptTags);
 	}
 }

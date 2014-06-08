@@ -16,11 +16,18 @@ abstract class AbstractHighchart
 		$this->container = new Data();
 	}
 
-	abstract public function render(AbstractEngine $engine);
+	abstract public function render(AbstractEngine $engine, $scriptTags = true);
 
 	public function set($key, $value)
 	{
 		$this->container->set($key, $value);
+
+		return $this;
+	}
+
+	public function append($key, $value)
+	{
+		$this->container->append($key, $value);
 
 		return $this;
 	}
