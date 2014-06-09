@@ -10,10 +10,18 @@ use Dflydev\DotAccessData\Data;
  */
 abstract class AbstractEngine
 {
+	const HIGHCHART = 0;
+	const HIGHSTOCK = 1;
+
 	/**
 	 * @var Options container.
 	 */
 	protected $options;
+
+	/**
+	 * @var Highstock checker
+	 */
+	protected $isHighstock = false;
 
 	/**
 	 * @abstract Render chart's JavaScript code.

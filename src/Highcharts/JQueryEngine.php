@@ -13,9 +13,9 @@ class JQueryEngine extends AbstractEngine
 	/**
 	 * Create an Engine object.
 	 */
-	public function __construct()
+	public function __construct($chartType = self::HIGHCHART)
 	{
-		// Nothing to do here.
+		$this->isHighstock = ($chartType === self::HIGHSTOCK);
 	}
 
 	/**
@@ -25,7 +25,11 @@ class JQueryEngine extends AbstractEngine
 	 */
 	public function renderJavaScript() {
 		$js = '$(function() {';
-		$js .= sprintf('var chart = new Highcharts.Chart(%s);', $this->options);
+		$js .= sprintf(
+			'var chart = new Highcharts.%s(%s);',
+			($this->isHighstock) ? "StockChart" : 'Chart',
+			$this->options
+		);
 		$js .= '});';
 
 		return $js;
