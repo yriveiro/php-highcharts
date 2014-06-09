@@ -23,9 +23,9 @@ $chart->append(
 	'yAxis.plotLines',
 	array(
 		'value' => 0,
-        'width' => 1,
-        'color' => '#808080'
-    )
+		'width' => 1,
+		'color' => '#808080'
+	)
 );
 
 $chart->set('tooltip.valueSuffix', 'ºC');
