@@ -21,12 +21,12 @@ abstract class AbstractEngine
 	abstract public function renderJavaScript();
 
 	/**
-	 * @param Dflydev\DotAccessData\Data $highchartOptions Options container.
+	 * @param string $highchartOptions Options container.
 	 * @param boolean $scriptTags Define if script HTML tags should be rendering.
 	 *
 	 * @return string Chart's JavaScript code.
 	 */
-	public function render(Data $highchartOptions, $scriptTags = true)
+	public function render($highchartOptions, $scriptTags = true)
 	{
 		$this->options = $highchartOptions;
 
