@@ -48,6 +48,18 @@ class HighchartTest extends PHPUnit_Framework_TestCase
 		);
 	}
 
+	public function testBuildHighchartWithSeries()
+	{
+		$this->chart->set('chart.renderTo', 'divContainer');
+		$this->chart->append('series', array('data' => array(4,3,6,7)));
+		$this->chart->append('series', array('data' => array(73,0,8,2)));
+
+		$this->assertEquals(
+			'{"chart":{"renderTo":"divContainer"},"series":[{"data":[4,3,6,7]},{"data":[73,0,8,2]}]}',
+			$this->chart->build()
+		);
+	}
+
 	public function testRenderHighchartWithJQueryEngine()
 	{
 		$this->chart->set('chart.renderTo', 'divContainer');
@@ -58,4 +70,13 @@ class HighchartTest extends PHPUnit_Framework_TestCase
 		);
 	}
 
+	public function testRenderHighchartWithJQueryEngineNoScriptTags()
+	{
+		$this->chart->set('chart.renderTo', 'divContainer');
+
+		$this->assertEquals(
+			'$(function() {var chart = new Highcharts.Chart({"chart":{"renderTo":"divContainer"}});});',
+			$this->chart->render(new JQueryEngine(), false)
+		);
+	}
 }
