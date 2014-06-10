@@ -15,9 +15,9 @@ Install
 * Composer:
 
 ```json
-        "require": {
-            "yriveiro/php-highcharts": "0.1.0"
-        }
+	"require": {
+		"yriveiro/php-highcharts": "0.1.0"
+	}
 ```
 
 Usage
