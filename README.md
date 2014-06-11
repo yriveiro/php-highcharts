@@ -7,8 +7,6 @@ Highcharts
 PHP wrapper for the awesome JavaScript library [Highcharts](http://www.highcharts.com/)
 
 
-Not ready for production yet.
-
 Install
 --------------
 
@@ -16,7 +14,7 @@ Install
 
 ```json
 	"require": {
-		"yriveiro/php-highcharts": "0.1.0"
+		"yriveiro/php-highcharts": "0.1.*"
 	}
 ```
 
