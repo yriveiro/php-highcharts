@@ -16,7 +16,7 @@ The simplest way to install this library is through the dependency manager [`Com
 
 ```json
 "require": {
-	"yriveiro/php-highcharts": "0.1.0"
+	"yriveiro/php-highcharts": "0.1.*"
 }
 ```
 
